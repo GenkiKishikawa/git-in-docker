@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    volumes: 
+    volumes:
       - .:/app
-      - ~/.ssh:/root/.ssh
+      - ~/.ssh/id_rsa:/root/.ssh/id_rsa
     command: bash -c "tail -f /dev/null"
